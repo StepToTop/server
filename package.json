@@ -1,0 +1,53 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StepToTop/server.git"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^5.0.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^3.1.0",
+    "pako": "^2.0.4",
+    "pm2": "^5.2.0",
+    "zeromq": "^5.2.8"
+  },
+  "devDependencies": {
+    "@modern-js/tsconfig": "^1.0.0",
+    "@types/node": "^14",
+    "@types/zeromq": "^5.2.1",
+    "eslint": "^8.14.0",
+    "eslint-config-egg": "^12.0.0",
+    "husky": "4.3.8",
+    "lint-staged": "^11.2.6",
+    "typescript": "^4"
+  },
+  "engines": {
+    "node": ">=14.17.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
+    ],
+    "*.{js,jsx,mjs,mjsx,cjs,cjsx}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
+    ]
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StepToTop/server/issues"
+  },
+  "homepage": "https://github.com/StepToTop/server#readme"
+}
