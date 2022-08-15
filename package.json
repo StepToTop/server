@@ -4,23 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "debug": "tsc && node ./output/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StepToTop/server.git"
   },
   "dependencies": {
+    "fast-json-stringify": "^5.1.0",
     "https-proxy-agent": "^5.0.0",
     "moment": "^2.29.1",
-    "node-fetch": "^3.1.0",
+    "node-fetch": "2.6.6",
     "pako": "^2.0.4",
     "pm2": "^5.2.0",
     "zeromq": "^5.2.8"
   },
   "devDependencies": {
-    "@modern-js/tsconfig": "^1.0.0",
+    "@tsconfig/recommended": "^1.0.1",
     "@types/node": "^14",
+    "@types/node-fetch": "^2.6.2",
     "@types/zeromq": "^5.2.1",
     "eslint": "^8.14.0",
     "eslint-config-egg": "^12.0.0",
