@@ -1,13 +1,21 @@
 {
-    "extends": "@modern-js/tsconfig/base",
-    "compilerOptions": {
-      "declaration": false,
-      "baseUrl": "./",
-      "paths": {
-        "@/*": ["./*"],
-      }
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2015",
+    "outDir": "output",
+    "declaration": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./*"]
     },
-    "exclude": ["node_modules"],
-    "include": ["./"]
-  }
-  
+    "module": "CommonJS",
+    "strict": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules", "output"],
+  "include": ["./"]
+}

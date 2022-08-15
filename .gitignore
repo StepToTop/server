@@ -104,4 +104,6 @@ dist
 .tern-port
 
 # 施工中
-lib
+# lib
+
+output
