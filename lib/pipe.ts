@@ -6,6 +6,9 @@ export const stringify = fastJson({
   title: 'CurrencyData',
   type: 'object',
   properties: {
+    timestamp: {
+      type: 'string',
+    },
     id: {
       type: 'string',
     },
@@ -73,6 +76,7 @@ export class DataPipe {
       }
     } else {
       this.times = 10;
+      res.data.timestamp = String(res.timestamp);
       return this.callback(res.data);
     }
 
